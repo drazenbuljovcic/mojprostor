@@ -1,4 +1,25 @@
 $(document).ready(function(){
+
+  getUserStatus = function(){
+    $.ajax({
+        type: "GET",
+        url: 'includes/php/status.php',
+        async: false,
+        processData: false,
+        contentType: false,
+        success: function(data) {
+          user = JSON.parse(data);
+          console.log(user)
+        },
+        error: function() {
+            alert('Greška u konekciji.');
+        }
+    });
+    return user;
+  }
+
+  user = getUserStatus();
+
     $('#search').on('click',function(){
       $('#dropdown').toggle();
       $('#login').toggle();
