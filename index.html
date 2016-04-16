@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8" />
+
 	<title>Prodaja i iznajmljivanje nekretnina na jednom mestu - mojprostor.rs</title>
+	<link rel="stylesheet" type="text/css" href="includes/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="includes/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="includes/css/main.css" />
 </head>
 <body>
+<div id="wrapper">
+	<header class="bg-info container-fluid navbar-fixed-top">
+		<div id="breadcrums">
+			<ol class="breadcrums">
+		  		<li class="active">Početna</li>				
+			</ol>
+  		</div>
+
+		<nav class="navbar navbar-default bg-success">
+
+			<div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">MojProstor</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">		 
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pretraga:<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">One more separated link</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">Link</a></li>
+		        <li><a href="#">Link</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
 
 
+		</nav>		
+	</header>
 
-<script type="text/javascript">
-	
-</script>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Prijava na mojprostor.rs</h1>
+			<div id="input-form">
+				<input class="form-control" type="text" name="username" placeholder="Korisničko ime"></input>
+				<input class="form-control" type="password" name="password" placeholder="Lozinka"></input>
+				<input class="form-control btn btn-primary" type="submit" name="submit" value="Prijava"></input>		
+			</div>	
+		</div>
+	</div>
+	<div id="break"></div>
+	<div id="content">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-4 thumbnail"><img class="image-responsive" src="includes/images/mansion_in_autumn.jpg" alt="Mansion in autumn" /><h2>Real estate picture</h2></div>
+			<div class="col-xs-12 col-sm-6 col-md-4 thumbnail"><img src="includes/images/modern_building.jpg" alt="Modern building" /><h2>Real estate picture</h2></div>
+			<div class="col-xs-12 col-sm-6 col-md-4 thumbnail"><img src="includes/images/ancient_architecture.jpg" alt="Ancient Architecture" /><h2>Real estate picture</h2></div>
+		</div>		
+	</div>
+</div>
+<script type="text/javascript" src="includes/js/jquery.min.js"></script>
+<script type="text/javascript" src="includes/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="includes/js/main.js"></script>
 
 </body>
 </html>
