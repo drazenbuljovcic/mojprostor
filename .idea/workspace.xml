@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="98405977-1928-41e6-8eca-22ab66f8011f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/php/search_all.php" afterPath="$PROJECT_DIR$/includes/php/search_all.php" />
     </list>
     <ignored path="mojprostor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="db_config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db_config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/php/db_config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            <state relative-caret-position="340">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -64,12 +65,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_all.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search_all.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/php/search_all.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="374">
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+              <folding>
+                <marker date="1460824588595" expanded="true" signature="226:240" placeholder="SELECT * FRO... ${$table}" />
+                <marker date="1460824588595" expanded="true" signature="226:426" placeholder="SELECT * FRO... ${$table}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,9 +81,12 @@
       <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/php/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="336">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="75" selection-end-column="5" />
+              <folding>
+                <marker date="1460820415698" expanded="true" signature="1069:1152" placeholder="SELECT * FRO... ${$table}" />
+                <marker date="1460820415698" expanded="true" signature="1170:1258" placeholder="SELECT * FRO... ${$table}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,9 +126,9 @@
         <option value="$PROJECT_DIR$/includes/php/registration.php" />
         <option value="$PROJECT_DIR$/includes/php/studentski.php" />
         <option value="$PROJECT_DIR$/includes/php/mobile_search.php" />
-        <option value="$PROJECT_DIR$/includes/php/search_all.php" />
         <option value="$PROJECT_DIR$/includes/php/search.php" />
         <option value="$PROJECT_DIR$/includes/php/login.php" />
+        <option value="$PROJECT_DIR$/includes/php/search_all.php" />
       </list>
     </option>
   </component>
@@ -239,7 +246,7 @@
       <option name="presentableId" value="Default" />
       <updated>1460756549427</updated>
       <workItem from="1460756551108" duration="27822000" />
-      <workItem from="1460820716397" duration="209000" />
+      <workItem from="1460820716397" duration="4067000" />
     </task>
     <task id="LOCAL-00001" summary="Index 3">
       <created>1460756671047</created>
@@ -290,26 +297,33 @@
       <option name="project" value="LOCAL" />
       <updated>1460812720750</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Trying to configure github!">
+      <created>1460820957588</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1460820957588</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28031000" />
+    <option name="totallyTimeSpent" value="31889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2579425" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -339,7 +353,8 @@
     <MESSAGE value="Backend - repairs in registration, login and db_config!" />
     <MESSAGE value="Database changes!" />
     <MESSAGE value="Conflict changes, search, registration, login, logout modified!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Conflict changes, search, registration, login, logout modified!" />
+    <MESSAGE value="Trying to configure github!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to configure github!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -390,7 +405,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1460824588595" expanded="true" signature="226:240" placeholder="SELECT * FRO... ${$table}" />
+            <marker date="1460824588595" expanded="true" signature="226:426" placeholder="SELECT * FRO... ${$table}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -398,7 +416,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
           <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1460820415698" expanded="true" signature="1069:1152" placeholder="SELECT * FRO... ${$table}" />
+            <marker date="1460820415698" expanded="true" signature="1170:1258" placeholder="SELECT * FRO... ${$table}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -429,22 +450,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/php/poslovni.php" />
     <entry file="file://$PROJECT_DIR$/includes/php/studentski.php" />
-    <entry file="file://$PROJECT_DIR$/includes/php/search_all.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/php/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/php/mobile_search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -487,9 +492,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/php/db_config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="340">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/php/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="75" selection-end-column="5" />
+          <folding>
+            <marker date="1460820415698" expanded="true" signature="1069:1152" placeholder="SELECT * FRO... ${$table}" />
+            <marker date="1460820415698" expanded="true" signature="1170:1258" placeholder="SELECT * FRO... ${$table}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/php/search_all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <marker date="1460824588595" expanded="true" signature="226:240" placeholder="SELECT * FRO... ${$table}" />
+            <marker date="1460824588595" expanded="true" signature="226:426" placeholder="SELECT * FRO... ${$table}" />
+          </folding>
         </state>
       </provider>
     </entry>
