@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    </head>
+    <body>
+        <div>
+            
+        </div>
+        
+        <script type="text/javascript" src="includes/js/jquery.min.js"></script>
+        <script type="text/javascript" src="includes/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="includes/js/main.js"></script>
+        <script>
+            $(document).ready(function (){
+                formData = new FormData();
+                formData.append("table", "student_space");
+                console.log(FormData);
+
+                $.ajax({
+                    type: "POST",
+                    url: 'includes/php/search_all.php',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(data) {
+                        var data = JSON.parse(data);
+                        var table_row = "<tr><th>Kvadratura</th><th>Opis</th><th>Cena</th><th>Datum dodavanja/isteka</th><th>Grejanje</th></tr>";
+                        for (var i = 0; i < data.length; i++){
+                            table_row += "<tr><td>" + data[i].size_m2 + "m2</td><td>" + data[i].description + "<br />Broj stanara: " + data[i].no_roommates + "</td>";
+                            table_row += "<td>" + data[i].rental_price + "</td><td>" + data[i].date_added + "/" + data[i].date_expired + "</td>";
+                            table_row += "<td>" + data[i].heating + "</td></tr>"
+                        }
+                        $('#student_table').append(table_row);
+                    },
+                    error: function() {
+                        alert('GreÅ¡ka u konekciji.');
+                    }
+                });
+            });
+        </script>
+        <table id="student_table"></table>
+    </body>
+</html>

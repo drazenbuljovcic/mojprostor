@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2016 at 02:40 PM
+-- Generation Time: Apr 16, 2016 at 06:38 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -73,6 +73,7 @@ CREATE TABLE IF NOT EXISTS `business_space` (
   `id_user` int(11) NOT NULL,
   `id_location` int(11) NOT NULL,
   `heating` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `picture` varchar(100) NOT NULL,
   PRIMARY KEY (`id_business_space`,`id_user`,`id_location`),
   KEY `fk_business_space_user_idx` (`id_user`),
   KEY `fk_business_space_location1_idx` (`id_location`)
@@ -82,10 +83,10 @@ CREATE TABLE IF NOT EXISTS `business_space` (
 -- Dumping data for table `business_space`
 --
 
-INSERT INTO `business_space` (`id_business_space`, `size_m2`, `description`, `parking_space`, `price`, `date_added`, `date_expired`, `is_premium`, `status`, `id_user`, `id_location`, `heating`) VALUES
-(3, '50.00', 'IZDAJEM LOKAL U STROGOM CENTRU NOVIH BANOVACA, PREKO PUTA OSNOVNE SKOLE I POSTE, ISPRED LOKALA AUTOBUSKA STANICA. LOKAL IMA 50 KVADRATA, POGODAN JE ZA SVE VRSTE DELATNOSTIi. PROSTRAN I OSVETLJEN. NA JAKO LEPOM MESTU, U ISTOJ KUCI SE NA SPRATU NALAZIi SALA ZA PILATES I AEROBIK, A U SUTERENU TERETANA "BEST GYM".', 5, 200, '2016-04-16 14:00:45', '0000-00-00 00:00:00', 'n', 'r', 4, 1, 'ta pec'),
-(4, '30.00', '30m2 + 7m2 galerija. Izlog i ulaz sa ulice. Mermerni pod, sanitarni čvor, telefon, internet, video nadzor, alarm. Roletna sa motorom.', 0, 200000, '2016-04-16 14:03:49', '0000-00-00 00:00:00', 'y', 's', 8, 2, 'centeralno'),
-(5, '20.00', 'Izdajem lokal/radno mesto za manikir pedikir ili u svrhe koje Vama odgovara. U namestenom salonu Naturalis. U prometnoj ulici. Placanje po dogovoru.', 2, 80, '2016-04-16 14:05:20', '0000-00-00 00:00:00', 'n', 'r', 6, 3, 'nema');
+INSERT INTO `business_space` (`id_business_space`, `size_m2`, `description`, `parking_space`, `price`, `date_added`, `date_expired`, `is_premium`, `status`, `id_user`, `id_location`, `heating`, `picture`) VALUES
+(3, '50.00', 'IZDAJEM LOKAL U STROGOM CENTRU NOVIH BANOVACA, PREKO PUTA OSNOVNE SKOLE I POSTE, ISPRED LOKALA AUTOBUSKA STANICA. LOKAL IMA 50 KVADRATA, POGODAN JE ZA SVE VRSTE DELATNOSTIi. PROSTRAN I OSVETLJEN. NA JAKO LEPOM MESTU, U ISTOJ KUCI SE NA SPRATU NALAZIi SALA ZA PILATES I AEROBIK, A U SUTERENU TERETANA "BEST GYM".', 5, 200, '2016-04-16 14:00:45', '0000-00-00 00:00:00', 'n', 'r', 4, 1, 'ta pec', 'image5b4d87fc583bfa35539a709099df7c05e1e135794adb2.jpg'),
+(4, '30.00', '30m2 + 7m2 galerija. Izlog i ulaz sa ulice. Mermerni pod, sanitarni čvor, telefon, internet, video nadzor, alarm. Roletna sa motorom.', 0, 200000, '2016-04-16 14:03:49', '0000-00-00 00:00:00', 'y', 's', 8, 2, 'centeralno', '20150830105012T1441279592_540c.jpg'),
+(5, '20.00', 'Izdajem lokal/radno mesto za manikir pedikir ili u svrhe koje Vama odgovara. U namestenom salonu Naturalis. U prometnoj ulici. Placanje po dogovoru.', 2, 80, '2016-04-16 14:05:20', '0000-00-00 00:00:00', 'n', 'r', 6, 3, 'nema', 'img3239T1431677255_540c.jpg');
 
 -- --------------------------------------------------------
 
@@ -184,6 +185,7 @@ CREATE TABLE IF NOT EXISTS `student_space` (
   `id_user` int(11) NOT NULL,
   `id_location` int(11) NOT NULL,
   `heating` varchar(20) NOT NULL,
+  `picture` varchar(100) NOT NULL,
   PRIMARY KEY (`id_student_space`,`id_user`,`id_location`),
   KEY `fk_student_space_user1_idx` (`id_user`),
   KEY `fk_student_space_location1_idx` (`id_location`)
@@ -193,13 +195,13 @@ CREATE TABLE IF NOT EXISTS `student_space` (
 -- Dumping data for table `student_space`
 --
 
-INSERT INTO `student_space` (`id_student_space`, `size_m2`, `description`, `rental_price`, `date_added`, `date_expired`, `is_premium`, `no_roommates`, `id_user`, `id_location`, `heating`) VALUES
-(1, '54.00', 'Dvosoban namesten stan kod Djerma. Novogradnja sa garaznim mestom uracunatim u cenu.', 300, '2016-04-16 14:08:06', '0000-00-00 00:00:00', 'n', 0, 6, 4, 'centeralno'),
-(2, '56.00', 'Izdajem trosoban stan na Karađorđevom putu u blizini škole Sečenji Ištvan. Stan renoviran sa pripadajućim podrumom.', 200, '2016-04-16 14:11:04', '0000-00-00 00:00:00', 'y', 0, 8, 5, 'toplana'),
-(3, '151.00', NULL, 250, '2016-04-16 14:12:26', '0000-00-00 00:00:00', 'n', 3, 5, 6, 'ima'),
-(4, '26.00', 'GARSONJERA 26m²,BULEVAR KOD FUTOŠKE PIJACE… NA ODLIČNOJ LOKACIJI,PRVI SPRAT ,TERASA,LIFT…', 140, '2016-04-16 14:13:54', '0000-00-00 00:00:00', 'n', 0, 7, 7, 'nema'),
-(5, '68.00', 'Na jednoj od najatraktivnijih lokacija u gradu, nudimo Vam funkcionalan, trosoban stan po izuzetno povoljnoj ceni! Blizina škole, pijace, centra, keja i svog drugog sadržaja za funkcionisanje porodice. Stan je za adaptaciju. Uknjižen, pa postoji mogućnost realizacije putem stambenog kredita. Pogledajte.', 260, '2016-04-16 14:15:32', '0000-00-00 00:00:00', 'y', 2, 8, 8, ''),
-(8, '94.00', 'Izdaje se trosoban renoviran stan na prvom spratu kod tri sesira, Stan poseduje 2 terase i podrum. Moze za familije i kao doktorska oridinacija. ', 160, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'y', 0, 8, 9, 'nema');
+INSERT INTO `student_space` (`id_student_space`, `size_m2`, `description`, `rental_price`, `date_added`, `date_expired`, `is_premium`, `no_roommates`, `id_user`, `id_location`, `heating`, `picture`) VALUES
+(1, '54.00', 'Dvosoban namesten stan kod Djerma. Novogradnja sa garaznim mestom uracunatim u cenu.', 300, '2016-04-16 14:08:06', '0000-00-00 00:00:00', 'n', 0, 6, 4, 'centeralno', '20160416094012T1460805251_540c.jpg'),
+(2, '56.00', 'Izdajem trosoban stan na Karađorđevom putu u blizini škole Sečenji Ištvan. Stan renoviran sa pripadajućim podrumom.', 200, '2016-04-16 14:11:04', '0000-00-00 00:00:00', 'y', 0, 8, 5, 'toplana', 'image.jpg'),
+(3, '151.00', NULL, 250, '2016-04-16 14:12:26', '0000-00-00 00:00:00', 'n', 3, 5, 6, 'ima', '3T1443273288_540c.jpg'),
+(4, '26.00', 'GARSONJERA 26m²,BULEVAR KOD FUTOŠKE PIJACE… NA ODLIČNOJ LOKACIJI,PRVI SPRAT ,TERASA,LIFT…', 140, '2016-04-16 14:13:54', '0000-00-00 00:00:00', 'n', 0, 7, 7, 'nema', 'img20160405163102T1460038441_540c.jpg'),
+(5, '68.00', 'Na jednoj od najatraktivnijih lokacija u gradu, nudimo Vam funkcionalan, trosoban stan po izuzetno povoljnoj ceni! Blizina škole, pijace, centra, keja i svog drugog sadržaja za funkcionisanje porodice. Stan je za adaptaciju. Uknjižen, pa postoji mogućnost realizacije putem stambenog kredita. Pogledajte.', 260, '2016-04-16 14:15:32', '0000-00-00 00:00:00', 'y', 2, 8, 8, '', '1T1460014256_540c.jpg'),
+(8, '94.00', 'Izdaje se trosoban renoviran stan na prvom spratu kod tri sesira, Stan poseduje 2 terase i podrum. Moze za familije i kao doktorska oridinacija. ', 160, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'y', 0, 8, 9, 'nema', 'dnevnasobaT1456137960_540c.jpg');
 
 -- --------------------------------------------------------
 
@@ -229,7 +231,7 @@ INSERT INTO `user` (`id_user`, `email`, `password`, `first_name`, `last_name`, `
 (5, 'john_wayne@ymail.com', 'searchers', 'Jovan', 'milivojevic', 2, 1, '2016-04-16 12:38:38', 0),
 (6, 'babini_stanovi hotmail.com', 'dobra_domacica', 'Marija', 'Markovic', 2, 2, '2016-04-16 12:38:50', 0),
 (7, 'betmenrobinovski@gmail.com', 'suprheroes', 'zivojin', 'pavlovic', 2, 1, '2016-04-16 12:39:02', 0),
-(8, 'valjam_nekretnine@gmail.com', 'zavrcem_kupce', 'sumnjivi', 'lik', 2, 5, '2016-04-16 12:39:13', 1);
+(8, 'valjam_nekretnine@gmail.com', 'zavrcem_kupce', 'sumnjivi', 'lik', 10, 5, '2016-04-16 12:39:13', 1);
 
 --
 -- Constraints for dumped tables
