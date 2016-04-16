@@ -1,7 +1,7 @@
 <?php
 
 //SECRET password for protecting database connection (connection not possible without secret)
-define("SECRET","65sdgf4s3g1dsg6sr84gsd35gs48gsrd");
+
 define("SALT1","sg4dsf846es64dfs2ef4");
 define("SALT2","gs5g4s64g6s8gf4skyugkh5");
 require_once ("db_config.php");
