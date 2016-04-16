@@ -12,7 +12,7 @@ session_start();
 if(!empty($_POST["email"]) AND !empty($_POST["password"]))
 {
     $email=$_POST["email"];
-    $password=sha1(SALT1.$_POST["password"].SALT2); //crypting password to match with the crypted password in database
+    $password=sha1(SALT1.$_POST["password"].SALT2); //encrypting password to match with the encrypted password in database
 
 
     global $connection;
