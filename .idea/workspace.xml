@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98405977-1928-41e6-8eca-22ab66f8011f" name="Default" comment="">
+    <list default="true" id="98405977-1928-41e6-8eca-22ab66f8011f" name="Default" comment="Search all for desktops!">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mojprostor.iws" />
@@ -245,7 +245,7 @@
       <option name="presentableId" value="Default" />
       <updated>1460756549427</updated>
       <workItem from="1460756551108" duration="27822000" />
-      <workItem from="1460820716397" duration="4122000" />
+      <workItem from="1460820716397" duration="4346000" />
     </task>
     <task id="LOCAL-00001" summary="Index 3">
       <created>1460756671047</created>
@@ -314,7 +314,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31944000" />
+    <option name="totallyTimeSpent" value="32168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
