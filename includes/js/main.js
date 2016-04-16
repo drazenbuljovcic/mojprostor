@@ -57,9 +57,9 @@ $(document).ready(function(){
             success: function(data) {
               var user = JSON.parse(data);
 
-              $('#user-name').html = "<a href=\"includes/php/logout.php\"<button class=\"btn btn-warning btn-lg\">Logout</button></a>";
-
-
+              if ('user' in user) {
+                $('#user-name').html = "<a href=\"includes/php/logout.php\"<button class=\"btn btn-warning btn-lg\">Logout</button></a>";
+              }
             },
             error: function() {
                 alert('Greška u konekciji.');

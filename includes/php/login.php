@@ -6,11 +6,10 @@ define("SALT1","sg4dsf846es64dfs2ef4");
 define("SALT2","gs5g4s64g6s8gf4skyugkh5");
 require_once ("db_config.php");
 
-connectToDB();
+$connection=connectToDB();
 session_start();
 
-var_dump($_SESSION);
-if(!isset($_SESSION["id"]))
+if(isset($_SESSION["id"]))
 {
     if (!empty($_POST["email"]) AND !empty($_POST["password"]))
     {

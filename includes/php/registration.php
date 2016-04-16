@@ -14,7 +14,7 @@ if(!empty($_POST["email"]) and !empty($_POST["password"]) and !empty($_POST["fir
     global $connection;
 
     $status=checkData($_POST["email"], $_POST["password"], $_POST["first_name"] ,$_POST["last_name"]);
-
+    
     $email=mysqli_real_escape_string($connection,$_POST["email"]);
     $password=sha1(SALT1.mysqli_real_escape_string($connection,$_POST["password"]).SALT2);
     $first_name=mysqli_real_escape_string($connection,$_POST["first_name"]);
@@ -49,14 +49,14 @@ if(!empty($_POST["email"]) and !empty($_POST["password"]) and !empty($_POST["fir
             $record["user"]["image"]="http://www.gravatar.com/avatar/".md5($record["email"]).".jpg";
 
             echo json_encode($status);
-
+            
         }
 
         else
         {
             $status["database"]="Error writing into database!";
             echo json_encode($status);
-
+            
         }
     }
 }
