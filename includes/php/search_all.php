@@ -5,11 +5,11 @@ require_once ("db_config.php");
 $connection=connectToDB();
 //session_start();
 
-if(!empty($_POST["table"]))
+if(!empty($_GET["table"]))
 {
-    $table=$_POST["table"];
+    $table=$_GET["table"];
 
-    $sql="SELECT * FROM $table";
+    $sql="SELECT * FROM $table ";
     $result=mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
     $status=array();
@@ -17,7 +17,7 @@ if(!empty($_POST["table"]))
     {
         if($record["is_premium"]=='y')
         {
-           array_unshift($status,$record);
+            array_unshift($status,$record);
         }
 
         if($record["is_premium"]=='n')
@@ -26,8 +26,9 @@ if(!empty($_POST["table"]))
         }
     }
 
+    var_dump($status);
 
-    echo json_encode($status);
+    //echo json_encode($status);
     
 }
 ?>
