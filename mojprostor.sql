@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2016 at 01:58 AM
+-- Generation Time: Apr 16, 2016 at 11:52 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -117,14 +117,24 @@ CREATE TABLE IF NOT EXISTS `student_space` (
 
 CREATE TABLE IF NOT EXISTS `user` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(20) NOT NULL,
+  `email` varchar(40) NOT NULL,
   `password` varchar(40) NOT NULL,
   `first_name` varchar(20) NOT NULL,
   `last_name` varchar(20) NOT NULL,
-  `limit` int(2) NOT NULL,
-  `active_adds` int(2) NOT NULL,
+  `adds_limit` int(2) NOT NULL DEFAULT '2',
+  `active_adds` int(2) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `email`, `password`, `first_name`, `last_name`, `adds_limit`, `active_adds`, `created`) VALUES
+(1, 'dfsfds@fdsfds.com', '3e28355a8e3c933289310d5a33d5c42c76f1e0e3', 'sdgsgsd', 'sdfgsdgd', 2, 0, '2016-04-16 11:16:46'),
+(2, 'dfsfds@fdsfds.com', '3e28355a8e3c933289310d5a33d5c42c76f1e0e3', 'sdgsgsd', 'sdfgsdgd', 2, 0, '2016-04-16 11:17:02'),
+(3, 'dfsfds@fdsfds.com', '3e28355a8e3c933289310d5a33d5c42c76f1e0e3', 'sdgsgsd', 'sdfgsdgd', 2, 0, '2016-04-16 11:18:46');
 
 --
 -- Constraints for dumped tables
