@@ -3,6 +3,7 @@ Bizkod assignment, business model for real estate.
 
 
 Images:
+http://www.freeimages.com/
 http://all-free-download.com/free-photos/real-estate-pictures.html
 
 Color palletes:

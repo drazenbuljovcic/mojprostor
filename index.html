@@ -10,69 +10,109 @@
 </head>
 <body>
 <div id="wrapper">
-	<header class="bg-info container-fluid navbar-fixed-top">
+	<header class="container-fluid navbar-fixed-top">
 		<div id="breadcrums">
 			<ol class="breadcrums">
-		  		<li class="active">Početna</li>				
+		  		<li class="active">Početna</li>
 			</ol>
-  		</div>
+		</div>
 
-		<nav class="navbar navbar-default bg-success">
+		<div id="user" class="row pull-right">
+			<h2 id="user-name" class="col-sm-6"><u>Ulogujte se.</u></h2>
+			<img class="thumbnail col-sm-6" src="http://www.gravatar.com/avatar/3b3be63a4c2a439b013787725dfce802" id="user-image" />
+		</div>
+		<div id="breaker"></div>
 
-			<div class="navbar-header">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 		        <span class="sr-only">Toggle navigation</span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#">MojProstor</a>
+		      <img src="includes/images/logoslogan.png" alt="mojprostor.rs" id="logo"/>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">		 
-		        <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pretraga:<span class="caret"></span></a>
-		          <ul class="dropdown-menu">
-		            <li><a href="#">Action</a></li>
-		            <li><a href="#">Another action</a></li>
-		            <li><a href="#">Something else here</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="#">Separated link</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="#">One more separated link</a></li>
-		          </ul>
-		        </li>
-		      </ul>
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#">Link</a></li>
-		        <li><a href="#">Link</a></li>
-		      </ul>
+		      <ul class="nav navbar-nav">
+						<li><a id="search" class="link" href="javascript:void(0)">Pretraga: <span id="caret">&#9660;</span> </a></li>
+						<li><a id="link" class="link" href="#">Poslovni prostori</a></li>
+						<li><a id="link" class="link" href="#">Studentski servis</a></li>
+	      	</ul>
 		    </div><!-- /.navbar-collapse -->
-
-
-		</nav>		
+		  </div><!-- /.container-fluid -->
+		</nav>
 	</header>
 
 	<div class="jumbotron">
 		<div class="container">
-			<h1>Prijava na mojprostor.rs</h1>
-			<div id="input-form">
-				<input class="form-control" type="text" name="username" placeholder="Korisničko ime" />
-				<input class="form-control" type="password" name="password" placeholder="Lozinka" />
-				<input class="form-control btn btn-primary" type="submit" name="submit" value="Prijava" />
-			</div>	
+			<div id="dropdown">
+				<button type="button" id="close_search" class="close">&times;</button>
+				<select class="type form-control" name="type">
+					<option value="">Odaberite tip prostora:</option>
+					<option value="business_space">Poslovni prostor</option>
+					<option value="student_space">Studentski stanovi</option>
+				</select>
+				<select class="status form-control" name="status">
+					<option value="">Status nekretnine:</option>
+					<option value="r">Izdavanje</option>
+					<option value="s">Prodaja</option>
+				</select>
+				<div id="roommates"><input type="checkbox" name="roommate" /><label>Cimer/ka</label></div>
+				<br />
+				<label>Kvadratura:</label><input value="form-control" class="" type="text" name="size" placeholder="Kvadratura" /><label>m2</label>
+				<h3>Graničnici cena</h3>
+				<label>Od:</label><input class="form-control" type="text" name="min_price" />
+				<label>Do:</label><input class="form-control" type="text" name="max_price" />
+				<input type="checkbox" name="parking" /><label>Parking mesta</label>
+				<input class="form-control" type="text" name="city" placeholder="Željeni grad" />
+
+				<input class="form-control btn btn-primary" type="submit" name="submit" value="Pretraga" />
+			</div>
+
+			<div id="login">
+				<h1>Prijava na mojprostor.rs</h1>
+				<div id="input-form">
+					<input id="login_email" class="form-control" type="email" name="email" placeholder="Email adresa" />
+					<input id="login_password" class="form-control" type="password" name="password" placeholder="Lozinka" />
+					<input id="login_submit" class="form-control btn btn-primary" type="submit" name="submit" value="Prijava" />
+				</div>
+				<button id="registration_button" data-toggle="modal" data-target="#registration_modal" class="btn btn-lg btn-info pull-right">Registracija</button>
+			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="registration_modal" tabindex="-1" role="dialog" aria-labelledby="registration_label">
+  <div class="modal-dialog" role="document">
+		<div class="modal-content" id="registration">
+      <div class="modal-body">
+				<h1>Registracija na mojprostor.rs</h1>
+
+				<input id="registration_email" class="form-control" type="email" name="email" placeholder="Vaša email adresa">
+				<input id="registration_password" class="form-control" type="password" name="password" placeholder="Vaša lozinka">
+				<input id="registration_first_name" class="form-control" type="text" name="first_name" placeholder="Vaše ime">
+				<input id="registration_last_name" class="form-control" type="text" name="last_name" placeholder="Vaša prezime">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Zatvori</button>
+        <button id="registration_submit" type="button" class="btn btn-primary">Registruj se</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 	<div id="break"></div>
 	<div id="content">
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-md-4 thumbnail"><img class="image-responsive" src="includes/images/mansion_in_autumn.jpg" alt="Mansion in autumn" /><h2>Real estate picture</h2></div>
 			<div class="col-xs-12 col-sm-6 col-md-4 thumbnail"><img src="includes/images/modern_building.jpg" alt="Modern building" /><h2>Real estate picture</h2></div>
 			<div class="col-xs-12 col-sm-6 col-md-4 thumbnail"><img src="includes/images/ancient_architecture_beautiful.jpg" alt="Ancient Architecture" /><h2>Real estate picture</h2></div>
-		</div>		
+		</div>
 	</div>
+</div>
 </div>
 <script type="text/javascript" src="includes/js/jquery.min.js"></script>
 <script type="text/javascript" src="includes/js/bootstrap.min.js"></script>
