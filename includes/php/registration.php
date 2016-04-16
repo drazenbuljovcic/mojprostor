@@ -24,7 +24,7 @@ if(!empty($_GET["email"]) and !empty($_GET["password"]) and !empty($_GET["first_
 
     if($status["error"]===true)
     {
-        return json_encode($status);
+        echo json_encode($status);
     }
 
     else
@@ -46,15 +46,16 @@ if(!empty($_GET["email"]) and !empty($_GET["password"]) and !empty($_GET["first_
 
             $status="";
             $status["user"]=$record;
+            $record["user"]["image"]="http://www.gravatar.com/avatar/".md5($record["email"]).".jpg";
 
-            return json_encode($status);
+            echo json_encode($status);
             
         }
 
         else
         {
             $status["database"]="Error writing into database!";
-            return json_encode($status);
+            echo json_encode($status);
             
         }
     }
@@ -62,6 +63,6 @@ if(!empty($_GET["email"]) and !empty($_GET["password"]) and !empty($_GET["first_
 else
 {
     $status["error"] = true;
-    return json_encode($status);
+    echo json_encode($status);
 
 }

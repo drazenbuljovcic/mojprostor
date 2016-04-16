@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 session_start();
 session_destroy();
@@ -9,7 +9,7 @@ if(empty($_SESSION["email"]) and empty($_SESSION["password"]))
 
     $send_back=json_encode($record);
 
-    return $send_back;
+    echo $send_back;
 }
 else
 {
@@ -17,5 +17,5 @@ else
 
     $send_back=json_encode($record);
 
-    return $send_back;
+    echo $send_back;
 }
