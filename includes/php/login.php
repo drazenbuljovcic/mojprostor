@@ -9,7 +9,8 @@ require_once ("db_config.php");
 connectToDB();
 session_start();
 
-if(isset($_SESSION["id"]))
+var_dump($_SESSION);
+if(!isset($_SESSION["id"]))
 {
     if (!empty($_POST["email"]) AND !empty($_POST["password"]))
     {

@@ -56,7 +56,8 @@ $(document).ready(function(){
             contentType: false,
             success: function(data) {
               var user = JSON.parse(data);
-              console.log(status)
+
+              $('#user-name').html = "<a href=\"includes/php/logout.php\"<button class=\"btn btn-warning btn-lg\">Logout</button></a>";
 
 
             },

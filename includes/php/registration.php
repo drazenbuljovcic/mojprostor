@@ -9,16 +9,16 @@ require_once ("functions.php");
 $connection=connectToDB();
 session_start();
 
-if(!empty($_GET["email"]) and !empty($_GET["password"]) and !empty($_GET["first_name"]) and !empty($_GET["last_name"]))
+if(!empty($_POST["email"]) and !empty($_POST["password"]) and !empty($_POST["first_name"]) and !empty($_POST["last_name"]))
 {
     global $connection;
 
-    $status=checkData($_GET["email"], $_GET["password"], $_GET["first_name"] ,$_GET["last_name"]);
-    
-    $email=mysqli_real_escape_string($connection,$_GET["email"]);
-    $password=sha1(SALT1.mysqli_real_escape_string($connection,$_GET["password"]).SALT2);
-    $first_name=mysqli_real_escape_string($connection,$_GET["first_name"]);
-    $last_name=mysqli_real_escape_string($connection,$_GET["last_name"]);
+    $status=checkData($_POST["email"], $_POST["password"], $_POST["first_name"] ,$_POST["last_name"]);
+
+    $email=mysqli_real_escape_string($connection,$_POST["email"]);
+    $password=sha1(SALT1.mysqli_real_escape_string($connection,$_POST["password"]).SALT2);
+    $first_name=mysqli_real_escape_string($connection,$_POST["first_name"]);
+    $last_name=mysqli_real_escape_string($connection,$_POST["last_name"]);
 
 
 
@@ -49,14 +49,14 @@ if(!empty($_GET["email"]) and !empty($_GET["password"]) and !empty($_GET["first_
             $record["user"]["image"]="http://www.gravatar.com/avatar/".md5($record["email"]).".jpg";
 
             echo json_encode($status);
-            
+
         }
 
         else
         {
             $status["database"]="Error writing into database!";
             echo json_encode($status);
-            
+
         }
     }
 }
